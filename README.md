@@ -11,7 +11,19 @@ Olap:
   - caching (cubes) (someday)
   - results formatter (json, jsonrecords, csv)
 
-## API
+Metadata:
+- allow annotations
+- allow properties on a level
+
+Front-end Web API mirrors the library api.
+
+### Components
+tesseract-core is a lib which has a nice Rust api fn calls.
+tesseract-web provides a light http Rest-ish interface, which should closely mirror the core api.
+
+## API (tesseract-core)
+
+## Web API (tesseract-web)
 
 ### Describe (REST api convention)
 
@@ -22,6 +34,19 @@ Putting in an id will give specific instance, otherwise leaving out id will give
 
 ### Aggregate
 `<base_url>/``cubes/<cube>/aggregate.<format>?<aggregation_query_params>`: aggregate using query params
+
+return object:
+```json
+"data": {
+},
+"annotations": [
+    {
+        "element": "Cube",
+        "text": "MapThis",
+    }
+]
+```
+annotations are optional. If there are none to give back, 
 
 ### Analytics
 `unimplemented!();`
