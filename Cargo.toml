@@ -1,7 +1,6 @@
-[package]
-authors = ["Walther Chen <walther.chen@gmail.com>"]
-name = "tesseract"
-version = "0.1.0"
+[workspace]
 
-[dependencies]
-failure = "0.1.1"
+members = [
+    "tesseract-core",
+    "tesseract-web",
+]

@@ -16,6 +16,7 @@ Metadata:
 - allow properties on a level
 
 Front-end Web API mirrors the library api.
+Front-end web api may also provide a kind of simple search (e.g. for members)?
 
 ### Components
 tesseract-core is a lib which has a nice Rust api fn calls.
